@@ -1,0 +1,40 @@
+{
+  "name": "mochastarter",
+  "version": "0.0.1",
+  "description": "Mocha starter project",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "_mocha ./bin/test --require TestHooks.js",
+    "testd": "_mocha ./bin/test --inspect-brk --require TestHooks.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goelankit/mochastarter.git"
+  },
+  "keywords": [
+    "mocha",
+    "starter",
+    "template",
+    "sample",
+    "mochasample",
+    "parallel",
+    "vscode",
+    "typescript"
+  ],
+  "author": "Ankit Goel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goelankit/mochastarter/issues"
+  },
+  "homepage": "https://github.com/goelankit/mochastarter#readme",
+  "dependencies": {
+    "@types/mocha": "5.2.7",
+    "@types/chai": "4.1.3",
+    "@types/node": "12.6.0",
+    "mocha": "8.2.1",
+    "chai": "4.2.0",
+    "nconf": "0.10.0",
+    "typescript": "3.9.2"
+  }
+}

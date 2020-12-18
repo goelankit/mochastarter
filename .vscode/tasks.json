@@ -1,0 +1,39 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Install NPM Packages",
+            "type": "shell",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "command": "npm install"
+        },
+        {
+            "label": "Test build Watch",
+            "type": "shell",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "isBackground": true,
+            "command": "npm run watch",
+            "problemMatcher": "$tsc-watch",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn": "Install NPM Packages"
+        },
+        {
+            "label": "Execute test",
+            "type": "shell",
+            "command": "npm run test -- bin\\${relativeFileDirname}\\${fileBasenameNoExtension}.js",
+            "problemMatcher": [],
+        },
+        {
+            "label": "Execute all tests",
+            "type": "shell",
+            "command": "npm run test -- bin\\**\\*.js",
+            "problemMatcher": [],
+        }
+    ]
+}
