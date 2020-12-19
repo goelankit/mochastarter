@@ -6,7 +6,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "_mocha ./bin/test --require TestHooks.js",
-    "testd": "_mocha ./bin/test --inspect-brk --require TestHooks.js"
+    "testd": "_mocha ./bin/test --inspect-brk --require TestHooks.js",
+    "test:parallel": "_mocha -parallel ./bin/test --require TestHooks.js"
   },
   "repository": {
     "type": "git",
